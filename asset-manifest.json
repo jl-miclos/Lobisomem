@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Lobisomem/static/css/main.821c23d1.css",
+    "main.js": "/Lobisomem/static/js/main.f0e2b0b1.js",
+    "index.html": "/Lobisomem/index.html",
+    "main.821c23d1.css.map": "/Lobisomem/static/css/main.821c23d1.css.map",
+    "main.f0e2b0b1.js.map": "/Lobisomem/static/js/main.f0e2b0b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.821c23d1.css",
+    "static/js/main.f0e2b0b1.js"
+  ]
+}
