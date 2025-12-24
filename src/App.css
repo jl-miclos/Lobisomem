@@ -1,38 +1,128 @@
+/* Configurações Globais */
+:root {
+  --bg-dark: #121212;
+  --card-bg: #1e1e1e;
+  --primary: #61dafb;
+  --secondary: #444;
+  --danger: #ff6b6b;
+  --success: #2ecc71;
+  --text: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-dark);
+  color: var(--text);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.App-header {
+  width: 100%;
+  max-width: 500px; /* Limite para não espalhar demais em tablets */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Containers e Cards */
+.container {
+  width: 100%;
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Inputs Padronizados */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #252525;
   color: white;
+  font-size: 16px; /* Evita zoom automático no iOS */
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+/* Botões Robustos para Mobile */
+button {
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s, transform 0.1s;
+  border: none;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  transform: scale(0.98);
 }
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
+
+.btn-small {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #333;
+  color: white;
+  margin: 2px;
+}
+
+/* Listagem de Jogadores */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #252525;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+}
+
+/* Estilos de Fase (Temas) */
+.night-theme { border: 2px solid #9370db; }
+.day-theme { border: 2px solid #f1c40f; }
+
+.action-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Ajuste para botões de votação em grid */
+.vote-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+hr { border: 0; border-top: 1px solid #333; margin: 15px 0; }
